@@ -5,6 +5,30 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Add all meta tags for RRSS and open graph -->
+  <meta property="og:title" content="Eventos Online" />
+  <meta property="og:description" content="Reserva tu ticket ahora... Tus eventos estan por llegar!" />
+  <meta property="og:image" content="https://cswni.github.io/eventos-app/1.jpg" />
+  <meta property="og:url" content="https://wilmermoraless.github.io/eventos-app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Eventos Online" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@wilmermoraless_" />
+  <meta name="twitter:creator" content="@wilmermoraless_" />
+  <meta name="twitter:title" content="Eventos Online" />
+  <meta name="twitter:description" content="Reserva tu ticket ahora... Tus eventos estan por llegar!" />
+  <meta name="twitter:image" content="https://wilmermoraless.github.io/eventos-app/1.jpg" />
+  <meta name="twitter:image:alt" content="Eventos Online" />
+  <meta name="twitter:domain" content="https://wilmermoraless.github.io" />
+  <meta name="twitter:url" content="https://wilmermoraless.github.io/eventos-app/" />
+  <meta name="description" content="Reserva tu ticket ahora... Tus eventos estan por llegar!" />
+  <meta name="keywords" content="eventos, online, tickets" />
+  <meta name="author" content="Eventos Online" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="google" content="nositelinkssearchbox" />
+  <meta name="google" content="notranslate" />
   <title>Eventos Online</title>
 </head>
 
@@ -34,72 +58,139 @@
     <div class="text-md font-bold text-center text-gray-800">Reserva tu ticket ahora</div>
     <div class="text-sm text-center text-gray-500">Mar 17, 2023 </div>
   </div>
-  <!-- Slider (Pase de diapositivas) -->
-
   <!-- Contenido de la aplicacion -->
-  <main>
+  <main class="mt-4">
 
-  </main>
-  <script type="module" src="/main.js"></script>
+    <!-- Slider (Pase de diapositivas) -->
+  <div class="titulos">Próximos eventos</div>
+  <div id="indicators-carousel" class="relative" data-carousel="slide">
+  <!-- Carousel wrapper -->
+  <div class="relative h-56 overflow-hidden md:h-96">
+    <!-- Item 1 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+      <img src="./src/imagenes/01.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="...">
+      <!-- Text -->
+      <div
+        class="absolute bottom-0 left-0 z-20 flex flex-col items-start justify-center w-full h-1/2 px-4 pb-4 text-white bg-gradient-to-t from-black/50">
+        <h2 class="text-2xl font-bold">Event 1</h2>
+        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+      </div>
+    </div>
+    <!-- Item 2 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="./src/imagenes/02.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="...">
+      <!-- Text -->
+      <div
+        class="absolute bottom-0 left-0 z-20 flex flex-col items-start justify-center w-full h-1/2 px-4 pb-4 text-white bg-gradient-to-t from-black/50">
+        <h2 class="text-2xl font-bold">Event 2</h2>
+        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+      </div>
+    </div>
+    <!-- Item 3 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="./src/imagenes/03.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="...">
+      <!-- Text -->
+      <div
+        class="absolute bottom-0 left-0 z-20 flex flex-col items-start justify-center w-full h-1/2 px-4 pb-4 text-white bg-gradient-to-t from-black/50">
+        <h2 class="text-2xl font-bold">Event 3</h2>
+        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+      </div>
+    </div>
+    <!-- Item 4 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="./src/imagenes/04.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+        alt="...">
+      <!-- Text -->
+      <div
+        class="absolute bottom-0 left-0 z-20 flex flex-col items-start justify-center w-full h-1/2 px-4 pb-4 text-white bg-gradient-to-t from-black/50">
+        <h2 class="text-2xl font-bold">Event 4</h2>
+        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+      </div>
+    </div>
 
-  
-<div class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 dark:bg-gray-700 dark:border-gray-600">
-  <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
-      <button data-tooltip-target="tooltip-home" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-l-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
-          <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-          </svg>
-          <span class="sr-only">Home</span>
-      </button>
-      <div id="tooltip-home" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-          Home
-          <div class="tooltip-arrow" data-popper-arrow></div>
+    <!-- Item 5 -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <img src="./src/imagenes/5.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
+        alt="...">
+      <!-- Text -->
+      <div
+        class="absolute bottom-0 left-0 z-20 flex flex-col items-start justify-center w-full h-1/2 px-4 pb-4 text-white bg-gradient-to-t from-black/50">
+        <h2 class="text-2xl font-bold">Event 5</h2>
+        <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
       </div>
-      <button data-tooltip-target="tooltip-wallet" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-          <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
-              <path clip-rule="evenodd" fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"></path>
-          </svg>
-          <span class="sr-only">Wallet</span>
-      </button>
-      <div id="tooltip-wallet" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-          Wallet
-          <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
-      <div class="flex items-center justify-center">
-          <button data-tooltip-target="tooltip-new" type="button" class="inline-flex items-center justify-center w-10 h-10 font-medium bg-blue-600 rounded-full hover:bg-blue-700 group focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
-              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"></path>
-              </svg>
-              <span class="sr-only">New item</span>
-          </button>
-      </div>
-      <div id="tooltip-new" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-          Create new item
-          <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
-      <button data-tooltip-target="tooltip-settings" type="button" class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
-          <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path>
-          </svg>
-          <span class="sr-only">Settings</span>
-      </button>
-      <div id="tooltip-settings" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-          Settings
-          <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
-      <button data-tooltip-target="tooltip-profile" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-r-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
-          <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path clip-rule="evenodd" fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"></path>
-          </svg>
-          <span class="sr-only">Profile</span>
-      </button>
-      <div id="tooltip-profile" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-          Profile
-          <div class="tooltip-arrow" data-popper-arrow></div>
-      </div>
+    </div>
   </div>
+  <!-- Slider indicators -->
+  <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+      data-carousel-slide-to="0"></button>
+    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+      data-carousel-slide-to="1"></button>
+    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+      data-carousel-slide-to="2"></button>
+    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+      data-carousel-slide-to="3"></button>
+    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+      data-carousel-slide-to="4"></button>
+  </div>
+  <!-- Slider controls -->
+  <button type="button"
+    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-prev>
+    <span
+      class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+      <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+      <span class="sr-only">Previous</span>
+    </span>
+  </button>
+  <button type="button"
+    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+    data-carousel-next>
+    <span
+      class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+      <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+      <span class="sr-only">Next</span>
+    </span>
+  </button>
 </div>
 
+    <!-- Slider (Pase de diapositivas) -->
+    <div class="flex flex-col justify-start items-center w-full">
+      <div class="titulos">Compra paquetes especiales para ti</div>
+
+      <div class="bg-pink-700 text-white w-full py-8 px-2">
+        <div class="flex justify-between items-center">
+          <span class="font-bold uppercase">Pop Music Concert</span>
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z" />
+            </svg>
+          </span>
+        </div>
+
+        <div class="flex justify-between items-center mt-6">
+          <span>Disfruta con toda tu familia en el evento mas esperado del año</span>
+          <button type="button" class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Comprar ahora</button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Barra de navegación -->
+  <div id="barra"></div>
+
+  <script type="module" src="src/js/main.js" defer></script>
 </body>
 </html>

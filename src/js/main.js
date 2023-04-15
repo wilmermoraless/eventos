@@ -4,3 +4,9 @@ import '../css/style.css';
 import 'flowbite';
 //Barra de la pagina
 import './paginas/barra.js';
+
+//impotar header
+import './header';
+
+//impotar header
+import './carrousel';

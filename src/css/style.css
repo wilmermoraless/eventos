@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply text-gray-300 p-0 m-0;
+    @apply text-gray-300 p-0 m-0 mb-24;
 }
 
 header {

@@ -72,7 +72,7 @@ class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-g
     <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
 
-  <a data-tooltip-target="tooltip-perfil" href="perfil"
+  <a data-tooltip-target="tooltip-perfil" href="perfil.html"
     class="inline-flex flex-col items-center justify-center px-5 rounded-r-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
     <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path clip-rule="evenodd" fill-rule="evenodd"

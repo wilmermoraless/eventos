@@ -98,7 +98,8 @@ class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-g
       d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
   </svg>
 </div>
-</header>`;let gr=document.getElementById("carrousel");gr.innerHTML=`<div class="relative h-56 overflow-hidden md:h-96">
+</header>`;let gr=document.getElementById("carrousel");gr.innerHTML=`<div id="indicators-carousel" class="relative" data-carousel="slide">
+<div class="relative h-56 overflow-hidden md:h-96">
 <!-- Item 1 -->
 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
   <img src="./src/imagenes/01.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"

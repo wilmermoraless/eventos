@@ -9,4 +9,4 @@ import './paginas/barra.js';
 import './header';
 
 //impotar header
-import './carrousel';
+import './carousel';

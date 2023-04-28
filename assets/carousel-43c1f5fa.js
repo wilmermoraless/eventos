@@ -2,7 +2,7 @@
 class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-2 left-1/2 dark:bg-gray-700 dark:border-gray-600">
 <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
   
-  <button data-tooltip-target="tooltip-home" type="button"
+  <a data-tooltip-target="tooltip-home" href="index.html"
     class="inline-flex flex-col items-center justify-center px-5 rounded-l-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
     <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path
@@ -10,7 +10,7 @@ class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-g
       </path>
     </svg>
     <span class="sr-only">Inicio</span>
-  </button>
+  </a>
 
   <div id="tooltip-home" role="tooltip"
     class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
@@ -18,7 +18,7 @@ class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-g
     <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
 
-  <button data-tooltip-target="tooltip-eventos" type="button"
+  <a data-tooltip-target="tooltip-eventos" href="tickets.html"
     class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
       class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
@@ -28,14 +28,16 @@ class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-g
 
 
     <span class="sr-only">Eventos</span>
-  </button>
+  </a>
+
   <div id="tooltip-eventos" role="tooltip"
     class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Eventos
     <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
   <div class="flex items-center justify-center">
-    <button data-tooltip-target="tooltip-new" type="button"
+
+    <a data-tooltip-target="tooltip-new" href="locations.html"
       class="inline-flex items-center justify-center w-10 h-10 font-medium bg-pink-600 rounded-full hover:bg-blue-700 group focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
       <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true">
@@ -43,14 +45,16 @@ class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-g
           d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"></path>
       </svg>
       <span class="sr-only">Nuevo ticket</span>
-    </button>
+    </a>
+
   </div>
   <div id="tooltip-new" role="tooltip"
     class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Comprar ticket
     <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
-  <button data-tooltip-target="tooltip-calendario" type="button"
+
+  <a data-tooltip-target="tooltip-calendario" href="timeline.html"
     class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
       class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
@@ -59,13 +63,14 @@ class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-g
     </svg>
 
     <span class="sr-only">Calendario</span>
-  </button>
+  </a>
   <div id="tooltip-calendario" role="tooltip"
     class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Calendario
     <div class="tooltip-arrow" data-popper-arrow></div>
   </div>
-  <button data-tooltip-target="tooltip-perfil" type="button"
+
+  <a data-tooltip-target="tooltip-perfil" href="perfil.html"
     class="inline-flex flex-col items-center justify-center px-5 rounded-r-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
     <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path clip-rule="evenodd" fill-rule="evenodd"
@@ -73,7 +78,7 @@ class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-g
       </path>
     </svg>
     <span class="sr-only">Perfil</span>
-  </button>
+  </a>
   <div id="tooltip-perfil" role="tooltip"
     class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
     Perfil
@@ -98,7 +103,8 @@ class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-g
       d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
   </svg>
 </div>
-</header>`;let gr=document.getElementById("carrousel");gr.innerHTML=`<div id="indicators-carousel" class="relative" data-carousel="slide">
+</header>`;let gr=document.getElementById("carousel");gr.innerHTML=`
+<div id="indicators-carousel" class="relative" data-carousel="slide">
 <div class="relative h-56 overflow-hidden md:h-96">
 <!-- Item 1 -->
 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">

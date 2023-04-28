@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply text-gray-300 p-0 m-0 mb-24;
+    @apply text-gray-600 p-0 m-0 mb-24;
 }
 
 header {
@@ -35,4 +35,8 @@ header {
 
 .seleccionado {
   @apply w-10 h-10 bg-red-500 text-white;
+}
+
+main {
+  @apply max-w-2xl mx-auto;
 }

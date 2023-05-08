@@ -16,7 +16,7 @@
           </svg>
     
         </div>
-        <div>Select</div>
+        <div class="font-bol">Select</div>
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
@@ -99,29 +99,37 @@
     <div class="asiento reservado">7G</div>
   </div>
 </div>
-      <div class="text-gray-800  rounded-t-2xl  mt-0 bg-white ">
+      <div class="text-gray-800  rounded-t-3xl  mt-0 bg-white text-sm">
 
-        <div class="flex mt-4 justify-center items-center text-black pt-8">
-        <input type="color" class="w-6 h-6" name="Selected" id="Selected" value="#ff0000">
-         <label for="Selected"  class="mr-20" >Selected</label>
-         
-         <input type="color" class="w-6 h-6" name="Reserved" id="Reserved" value="#0000ff">
-         <label for="Reserved" class="mr-20">Reserved</label>
-        
-         <input type="color" class="w-6 h-6" name="Available" id="Available" value="#ffffff">
-         <label for="Available" class="mr-20">Available</label>
-         
+        <div class="flex pt-4 ml-4">
+          <div class="w-4 h-4 bg-red-600 rounded-md"></div>
+          <span class="pr-16 ml-2">selected</span>
+          <div class="w-4 h-4 bg-blue-600 rounded-md" ></div>
+          <span class="pr-16 ml-2">Reserved</span>
+          <div class="w-4 h-4 border border-1 border-black rounded-md"></div>
+          <span class="ml-2">Available</span>
         </div>
+       <!--  <div class="relative  pt-4  text-black pb-6">
+        <input type="color" class="w-6 h-6 absolute left-2" name="Selected" id="Selected" value="#ff0000">
+         <label for="Selected"  class="absolute pt-1 left-10" >Selected</label>
+         
+         <input type="color" class="w-6 h-6 absolute left-40" name="Reserved" id="Reserved" value="#0000ff">
+         <label for="Reserved" class="absolute pt-1 left-48">Reserved</label>
+        
+         <input type="color" class="w-6 h-6 absolute right-20" name="Available" id="Available" value="#ffffff">
+         <label for="Available" class="absolute pt-1 right-4">Available</label>
+         
+        </div> -->
          
        
         
-        <h1 class="mr-6 font-bold pl-4 mt-4">About Event</h1>
-        <div class="flex justify-center items-center mt-2 ">
-        <p class="mr-20">Concert</p>
-        <p class="mr-20">New York - USA</p>
-        <p class="mr-20">Cras Building</p>
+        <p class="mr-6 font-bold pl-4 mt-4 pb-4" >About Event</p>
+        <div class="flex justify-between mt-2 ml-4 mr-4 pb-6 text-sm">
+        <p class="">Concert</p>
+        <p class="">New York - USA</p>
+        <p class="">Cras Building</p>
       </div>
-        <p class="flex justify-center items-center mt-4 text-black pl-2">Praesent hendrerit in metus ac finibus. Vestibulum accumsan porta mi sit amet placerat. In ac nisi ac Lectus accumsan tempor</p>
+        <p class="flex justify-center items-center mt-4 text-black pl-2 text-sm pb-6">Praesent hendrerit in metus ac finibus. Vestibulum accumsan porta mi sit amet placerat. In ac nisi ac Lectus accumsan tempor</p>
         <div class="pl-2 pr-2">
           <button type="button" class="focus:outline-none text-white bg-red-600 w-full h-75 rounded-lg py-2 mt-2 mb-4 ">Reservar ahora</button>
         </div>

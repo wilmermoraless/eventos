@@ -35,4 +35,4 @@ querySnapshot.forEach((doc) => {
         </div>
         <div class="pb-6"></div>
     </li>`;
-});
+});                                                 

@@ -1,0 +1,19 @@
+#artistas{
+    @apply flex flex-col gap-2 mt-4;
+}
+
+#artistas li{
+    @apply flex items-center  gap-4 border border-4 border-pink-500 p-4 rounded-lg bg-pink-50 text-3xl hover:shadow-lg hover:shadow-pink-500 hover:cursor-pointer justify-between;
+}
+
+#artistas img{
+    @apply w-28 h-28 rounded-full;
+}
+
+#tareas{
+    @apply flex gap-2;
+}
+
+#tareas a{
+    @apply rounded-lg bg-white border border-pink-500 px-1 py-2 text-sm hover:bg-pink-200 hover:text-white;
+}

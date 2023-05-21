@@ -1,4 +1,4 @@
-//Importar firebase y su configuracion
+/* //Importar firebase y su configuracion
 import {db} from '../firebase';
 
 //Importar getFirestore para leer la base de datos
@@ -35,4 +35,155 @@ querySnapshot.forEach((doc) => {
         </div>
         <div class="pb-6"></div>
     </li>`;
-});                                                 
+});  */     
+//Importar firebase y su configuracion
+import {db} from '../firebase';
+
+//Importar getFirestore para leer la base de datos
+import { doc,collection, setDoc, query, deleteDoc, getDocs} from 'firebase/firestore';
+
+//Leer la coleccion de eventos
+const eventos = query(collection(db, "eventos"));
+
+//Leer los documentos de la coleccion de forma asincrona
+const querySnapshot = await getDocs(eventos);
+
+let eventos_contenedor = document.getElementById('eventos');
+
+querySnapshot.forEach((doc) => {
+  let evento = doc.data()
+  let id = doc.id;
+  
+  eventos_contenedor.innerHTML += `
+    <li class="">
+        <img src="${evento.imagen}" alt="${evento.nombre}" class="">
+    
+        <div class="flex-1 flex flex-col">
+          <span>${evento.nombre}</span>  
+          <span class="text-sm text-pink-600">${evento.descripcion} | ${evento.fecha} </span>  
+
+        </div>
+
+        <div id="tareas">
+          <a href="editar-evento.html?id=${id}" >Editar</a>
+          <a data-doc="${id}" id="eliminar" href="#">Eliminar</a>
+        </div> 
+    </li>`;
+});
+
+if(querySnapshot.size == 0){
+  eventos_contenedor.innerHTML = `
+    <li class="">
+        <div class="flex-1 text-center flex flex-col">
+          <span>No hay eventos</span>
+        </div>
+    </li>`;
+}
+
+
+
+//Agregar el evento click a todos los botones de eliminar
+const eliminar = document.querySelectorAll('#eliminar');
+
+eliminar.forEach((item) => {
+  item.addEventListener('click', eliminarEvento);
+});
+
+//Function to delete artist
+function eliminarEvento(e){
+  //Prevent the default action
+  e.preventDefault();
+
+  //Usar sweetalert para confirmar la accion
+  Swal.fire({
+    title: "¿Estas seguro?",
+    text: "Una vez eliminado, no podras recuperar este artista",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: '#DD6B55',
+    confirmButtonText: 'Si, borrar!',
+    cancelButtonText: "No, cancelar!",
+    closeOnConfirm: false,
+    closeOnCancel: false
+  })
+  .then((result) => {
+    //Si el usuario confirma
+    if (result.isConfirmed) {
+      //Buscar el id del eventos a eliminar
+      const id = e.target.dataset.doc;  
+      
+      //Buscar el documento en la coleccion
+      const docRef = doc(db, "eventos", id);
+
+      //Eliminar el documento
+      deleteDoc(docRef)
+      .then(() => {
+        //Mostar un mensaje de confirmacion
+        Swal.fire({
+          title: "Eliminado!",
+          text: "El evento ha sido eliminado.",
+          icon: "success",
+        })
+        .then(() => {
+          //Redireccionar a eventos.html
+          window.location.href = "eventos.html";
+        })
+      })
+    }
+  })
+}
+
+//Agregar el evento click al boton de crear un evento
+const btnCrear = document.getElementById('crear');
+
+btnCrear.addEventListener('click', crearEvento);
+
+function crearEvento(){
+  Swal.fire({
+    title: 'Crear evento',
+    html: `
+      <input id="nombre" class="swal2-input" placeholder="Nombre">
+      <input id="imagen" class="swal2-input" placeholder="imagen">
+      <input id="fecha" class="swal2-input" placeholder="fecha">
+      <input id="hora" class="swal2-input" placeholder="hora">
+    `,
+    confirmButtonText: 'Crear',
+    focusConfirm: false,
+    preConfirm: () => {
+      const nombre = Swal.getPopup().querySelector('#nombre').value;
+      const imagen = Swal.getPopup().querySelector('#imagen').value;
+      const fecha = Swal.getPopup().querySelector('#fecha').value;
+      const hora = Swal.getPopup().querySelector('#hora').value;
+      if (!nombre || !imagen || !fecha || !hora) {
+        Swal.showValidationMessage(`Por favor, llena todos los campos`)
+      }
+      return { nombre: nombre, imagen: imagen, fecha: fecha, hora: hora }
+    }
+  }).then((result) => {
+    if (result.isConfirmed) {
+      //Agregar el evento a la base de datos
+      addEvent(result.value);
+    }
+  })
+}
+
+//Funcion para agregar un evento en la base de datos
+function addEvent(evento){
+  //Agregar un nuevo documento con un ID aleatorio en la coleccion de evento
+  const docRef = doc(collection(db, "eventos"));
+
+  //Definit el objeto que se va a guardar en la base de datos
+  setDoc(docRef, evento)
+  .then(() => {
+    //Mostrar un mensaje de exito
+    Swal.fire({
+      title: "Creado!",
+      text: "El evento ha sido creado.",
+      icon: "success",
+    })
+    .then(() => {
+      //Redireccionar a artistas.html
+      window.location.href = "eventos.html";
+    })
+  })
+}                                           

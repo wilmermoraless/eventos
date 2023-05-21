@@ -1,4 +1,4 @@
-import"./carousel-bf8a9a90.js";import{R as c,_ as s,f as d,m as r,g as f,w as u,d as o}from"./firebase-5b2ff95b.js";const m=c(s(o,"artistas")),n=await d(m);let l=document.getElementById("artistas");n.forEach(t=>{let e=t.data(),a=t.id;l.innerHTML+=`
+import"./carousel-f9d3c64f.js";import{R as c,_ as s,f as d,m as r,g as f,w as u,d as o}from"./firebase-5b2ff95b.js";const m=c(s(o,"artistas")),n=await d(m);let l=document.getElementById("artistas");n.forEach(t=>{let e=t.data(),a=t.id;l.innerHTML+=`
     <li class="">
         <img src="${e.foto}" alt="${e.nombre}" class="">
     
